@@ -1,24 +1,83 @@
-body {
-    margin-top: 50px;
+/* App Tool */
+.online-tool .divider {
+    border: 1px solid rgba(51, 153, 170, 0.3);
+    margin: 10px;
 }
-.app-tool .panel {
-    margin-top: 30px
+
+/* Preview Div*/
+.online-tool .preview .appIcon {
+    height: 220px;
+    width: 220px;
+    background-color: #000;
+    border-radius: 50px;
+    margin: auto;
 }
-.app-tool .divider {
-    margin-top: 15px;
-    border-bottom: 1px solid rgba(225,225,225,0.9);
+
+.online-tool .preview .splashScreen {
+    height: 300px;
+    width: 220px;
+    background-color: #000;
+    margin: auto;
 }
-.app-tool .panel .tool {
-    margin-top: 20px;
+.online-tool .preview .col-sm-6 {
+    color: #39a;
+    text-align: center;
 }
- .well {
-     margin-top: 5px;
-     margin-bottom: 10px;
-    background-color: #fff !important;
-    }
-.app-tool .btn {
-    margin-top: 15px;
+
+.online-tool .preview .textDisp,
+.online-tool .preview .hlptextDisp {
+    color: #fff;
+    text-align: center;
 }
-.app-tool #get-image-icon {
-  height: 180px;  
+
+.online-tool .preview .appIcon .textDisp {
+    font-size: 20px;
+    padding-top: 35%;
+    text-align: center;
+}
+
+.online-tool .preview .splashScreen .textDisp {
+    padding-top: 55%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.online-tool .preview .hlptextDisp {
+    font-size: 13px;
+}
+.online-tool  button:last-child {
+   border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+/* Panel */
+
+
+.online-tool .panel-heading,
+.btn-primary {
+    background-color: #39a;
+    color: #fff;
+    border: 1px solid #39a;
+}
+
+.btn-primary:hover,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    background: #fff !important;
+    color: #39a;
+    border: 1px solid #39a;
+    outline: none;
+}
+
+.online-tool .panel-default .well {
+    background-color: #fff;
+    margin-top: 10px;
+}
+
+.online-tool .panel-default {
+    border: 1px solid #39a;
 }

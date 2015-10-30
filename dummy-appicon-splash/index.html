@@ -3,37 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>MT - Online App Icon Tool</title>
 
-    <title>App Tool</title>
+    <!-- Stylesheet -->
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
-    <link href="css/select2-bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
-
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -51,263 +34,276 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <!--/.nav-collapse -->
+
         </div>
     </nav>
-    <div class="container app-tool">
-        <div class="row">
-            <div class="col-xs-9">
-
-                <!-- App Name Input -->
+    <div class="container online-tool">
+        <div class="col-md-8">
+            
+<!--    Input Text field     -->
+            <section>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">App Tool</h3>
                     </div>
                     <div class="panel-body">
-
+                        <!--    Panel Content    -->
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">App Name:</label>
+                                <lable class="col-sm-2 control-lable">Appname</lable>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputEmail3" placeholder="Enter name of the app">
+                                    <input type="text" class="form-control" id="textInput" placeholder="Enter name of the app">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <lable class="col-sm-2 control-lable">Help text</lable>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="helptextInput" placeholder="Enter help text">
                                 </div>
                             </div>
                         </form>
-                        <div class="row divider"></div>
-                        
-                        <!-- IOS CheckBox Data -->
-
-
-                        <div class="form-horizontal col-xs-offset-1 tool">
-                            <div class="checkbox " data-toggle="collapse" data-target="#iOS" aria-expanded="false" aria-controls="collapseExample">
-                                <label>
-                                    <input type="checkbox"> iOS
-                                </label>
-                            </div>
-                            <div class="collapse" id="iOS">
-                                <div class="well">
-                                    <!--- iOS App Icon Content -->
-                                    <div class="ios-selection col-xs-offset-1">
-                                        <div class="checkbox " data-toggle="collapse" data-target="#iOS-App-Icon" aria-expanded="false" aria-controls="collapseExample">
-                                            <label>
-                                                <input type="checkbox"> App Icon
-                                            </label>
-                                        </div>
-                                        <div class="col-xs-offset-1">
-                                            <div class="collapse" id="iOS-App-Icon">
-                                                <div class="well">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" id="all_ios_app_icon"> All
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" class="iOS_app_icon"> Normal
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" class="iOS_app_icon"> @2x
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" class="iOS_app_icon"> @3x
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- iOS Splash Content -->
-
-                                        <div class="divider"></div>
-                                        <div class="checkbox " data-toggle="collapse" data-target="#iOS-splash" aria-expanded="false" aria-controls="collapseExample">
-                                            <label>
-                                                <input type="checkbox"> Splash
-                                            </label>
-                                        </div>
-                                        <div class="col-xs-offset-1">
-                                            <div class="collapse" id="iOS-splash">
-                                                <div class="well">
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" id="all_ios_splash"> All
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" class="iOS_splash"> iPhone 5s
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" class="iOS_splash"> iPhone 6
-                                                        </label>
-                                                    </div>
-                                                    <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox" class="iOS_splash"> Iphone 6 Plus
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row divider"></div>
-
-                        <!-- Android CheckBox Data -->
-                        <div class="form-horizontal col-xs-offset-1 tool">
-
-
-                            <div class="checkbox " data-toggle="collapse" data-target="#android" aria-expanded="false" aria-controls="collapseExample">
-                                <label>
-                                    <input type="checkbox"> Android
-                                </label>
-                            </div>
-
-                            <div class="collapse" id="android">
-                                <div class="well">
-                                    
-                                    <!--- Android App Icon Content -->
-  <div class="android-selection col-xs-offset-1">
-                                    <div class="checkbox " data-toggle="collapse" data-target="#android-App-Icon" aria-expanded="false" aria-controls="collapseExample">
-                                        <label>
-                                            <input type="checkbox"> App Icon
-                                        </label>
-                                    </div>
-        <div class="col-xs-offset-1">
-                                    <div class="collapse" id="android-App-Icon">
-                                        <div class="well">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" id="all_android_app_icon"> All
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="android_app_icon"> Normal
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="android_app_icon"> @2x
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="android_app_icon"> @3x
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-      </div>
-                                    <!-- iOS Splash Content -->
-
-
-                                    <div class="checkbox " data-toggle="collapse" data-target="#android-splash" aria-expanded="false" aria-controls="collapseExample">
-                                        <label>
-                                            <input type="checkbox"> Splash
-                                        </label>
-                                    </div>
-        <div class="col-xs-offset-1">
-                                    <div class="collapse" id="android-splash">
-                                        <div class="well">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" id="all_android_splash"> All
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="android_splash"> iPhone 5s
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="android_splash"> iPhone 6
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" class="android_splash"> Iphone 6 Plus
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-      </div>
-
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <!-- Button -->
-                        <div class="divider"></div>
-                        <a class="btn btn-default btn-lg btn-toggle pull-right" href="">Download Zip <i class="fa fa-file-archive-o fa-lg"></i></a>
 
                     </div>
                 </div>
-            </div>
 
-            <div class="col-xs-3">
+
+
+            </section>
+
+<!-- Preview -->
+            <section class="preview hidden-xs">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Preview</h3>
                     </div>
                     <div class="panel-body">
+                        <div class="col-sm-6">
+                            <h3>Icon</h3>
+                            <div class="appIcon">
 
-                        <div class="row">
-                            <div class="col-xs-10 col-xs-offset-1">
+                                <div class="textDisp"></div>
 
-                                <h4>App Icon</h4>
-                                <div class="col-md-12">
-
-                                    <img id="get-image-icon" src="img/Sample-icon.png">
-
-                                </div>
+                                <div class="hlptextDisp"></div>
 
                             </div>
                         </div>
-<div class="divider"></div>
+                        <div class="col-sm-6">
+                            <h3>Splash Screen</h3>
+                            <div class="splashScreen">
+                                <div class="textDisp"></div>
 
-                        <div class="row">
-                            <div class="col-xs-10 col-xs-offset-1">
-
-                                <h4>Splash</h4>
-                                <div class="col-md-12">
-
-                                    <img id="get-splash-image" src="img/splash.png">
-
-                                </div>
+                                <div class="hlptextDisp"></div>
 
                             </div>
                         </div>
-
                     </div>
                 </div>
+
+            </section>
+        </div>
+<!-- Icon Size Selection -->
+        <div class="col-md-4">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Generate Icon</h3>
+                </div>
+                <div class="panel-body" >
+
+                    <!--  Apple Icon / Splash -->
+
+                    <button class="btn btn-primary btn-sm" role="button" data-toggle="collapse" href="#apple" aria-expanded="false" aria-controls="apple">
+                        <i class="fa fa-apple fa-lg"></i> IOS Icon / Splash
+                    </button>
+                   
+                    <!--  Android Icon / Splash -->
+                    <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#android" aria-expanded="false" aria-controls="android">
+                        <i class="fa fa-android fa-lg"></i> Android Icon / Splash
+                    </button>
+                    
+                    
+<!-- Collapse Apple Icon -->
+ <div class="collapse" id="apple">
+                        <div class="well">
+
+                            <i class="fa fa-apple fa-2x"></i> IOS Icon / Splash
+                            <div class="clearfix divider"></div>
+                            <div class="row">
+<!-- Apple Icon -->
+                                <div class="col-xs-6">
+                                    <h4>ICON</h4>
+
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="all_ios_app_icon"> All
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_app_icon"> Normal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_app_icon"> @2x
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_app_icon"> @3x
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_app_icon"> @4x
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_app_icon"> @5x
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Apple Splash Screen -->
+                                <div class="col-xs-6">
+                                    <h4>SPLASH</h4>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="all_ios_splash"> All
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_splash"> normal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_splash"> iPhone 4
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_splash"> iPhone 5s
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_splash"> iPhone 6
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="iOS_splash"> iPhone 6+
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Collapse Android Icon -->
+                    <div class="collapse" id="android">
+                        <div class="well">
+                            <i class="fa fa-android fa-2x"></i> Android Icon / Splash
+                            <div class="clearfix divider"></div>
+                            <div class="row">
+<!-- Android Icon -->
+                                <div class="col-xs-6">
+                                    <h4>ICON</h4>
+
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="all_droid_icon"> All
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_icon"> Normal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_icon"> @2x
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_icon"> @3x
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_icon"> @4x
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_icon"> @5x
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Android Splash Screen -->
+                                <div class="col-xs-6">
+                                    <h4>SPLASH</h4>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="all_droid_splash"> All
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_splash"> normal
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_splash"> iPhone 4
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_splash"> iPhone 5s
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_splash"> iPhone 6
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" class="droid_splash"> iPhone 6+
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block"><i class="fa fa-file-archive-o fa-lg"></i> Download Zip</button>
             </div>
+
         </div>
     </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        $("#textInput")
+            .keyup(function() {
+                var value = $(this).val();
+                $(".textDisp").text(value);
+            })
 
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.cloudinary.js"></script>
-
-    <script type="text/javascript" src="js/main.js"></script>
-
+        $("#helptextInput")
+            .keyup(function() {
+                var value = $(this).val();
+                $(".hlptextDisp").text(value);
+            })
+            .keyup();
+    </script>
 </body>
 
 </html>
