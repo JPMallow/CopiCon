@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MT - Online App Icon Tool</title>
+    <title>CopiCon</title>
 
     <!-- Stylesheet -->
 
@@ -15,292 +15,244 @@
 
 </head>
 
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+<body class="container online-tool">
+    <section>
+        <div class="header">
+            <h2>CopiCon</h2>
+            <h4><small>Sample Appicon &amp; Splash for mobile</small></h4>
+        </div>
+    </section>
+    <section>
+    
+        <div class="row">
+        <div class="col-md-8 main">
+            <div class="heading">
+
+                <div class="numberCircle">
+                    <h3>App name</h3>
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="inputIcon" placeholder="Apex">
+
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="inputCaptionIcon" placeholder="Caption Icon">
+
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="inputCaptionSplash" placeholder="Caption Splash">
+
+            </div>
+            <div class="heading">
+                <div class="numberCircle">
+                    <h3>Choose Platform</h3>
+                    <span>2</span>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="apple" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <i class="fa fa-apple fa-4x"></i>
                 </button>
-                <a class="navbar-brand" href="#">App Icon Tool</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse navbar-right">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <button type="button" id="android" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <i class="fa fa-android fa-4x"></i>
+                </button>
             </div>
 
-        </div>
-    </nav>
-    <div class="container online-tool">
-        <div class="col-md-8">
-            
-<!--    Input Text field     -->
-            <section>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">App Tool</h3>
-                    </div>
-                    <div class="panel-body">
-                        <!--    Panel Content    -->
-                        <form class="form-horizontal">
-                            <div class="form-group">
-                                <lable class="col-sm-2 control-lable">Appname</lable>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="textInput" placeholder="Enter name of the app">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <lable class="col-sm-2 control-lable">Help text</lable>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="helptextInput" placeholder="Enter help text">
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
+            <div class="heading">
+                <div class="numberCircle">
+                    <h3>Choose Size</h3>
+                    <span>3</span>
                 </div>
+                <h3></h3>
+            </div>
+
+            <div class="icon" id="ios">
+                <p>iOS - AppIcon</p>
+                <div class="icon-size">
 
 
-
-            </section>
-
-<!-- Preview -->
-            <section class="preview hidden-xs">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Preview</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="col-sm-6">
-                            <h3>Icon</h3>
-                            <div class="appIcon">
-
-                                <div class="textDisp"></div>
-
-                                <div class="hlptextDisp"></div>
-
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <h3>Splash Screen</h3>
-                            <div class="splashScreen">
-                                <div class="textDisp"></div>
-
-                                <div class="hlptextDisp"></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-        </div>
-<!-- Icon Size Selection -->
-        <div class="col-md-4">
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Generate Icon</h3>
-                </div>
-                <div class="panel-body" >
-
-                    <!--  Apple Icon / Splash -->
-
-                    <button class="btn btn-primary btn-sm" role="button" data-toggle="collapse" href="#apple" aria-expanded="false" aria-controls="apple">
-                        <i class="fa fa-apple fa-lg"></i> IOS Icon / Splash
+                    <button type="button" id="all-apple-icon" class="btn btn-primary apple" onClick="toggleAll(this,'.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                        
+                    </button>
+                     <button type="button" class="btn btn-primary apple apple-icon" onClick="toggle(this,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="180x180">iPhone @3x
+                        <span>180 x 180</span>
+                        
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" onClick="toggle(this,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="120x120">iPhone @2x
+                        <span>120 X 120</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" onClick="toggle(this,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="76x76">  iPad @1x  <span>76 x 76</span>
+                    </button>
+                    
+                    <button type="button" class="btn btn-primary apple apple-icon" onClick="toggle(this,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="152x152">iPad @2x 
+                        <span>152 x 152</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" onClick="toggle(this,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="167x167">iPad Pro @2x
+                        <span> 167 x 167</span>
                     </button>
                    
-                    <!--  Android Icon / Splash -->
-                    <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#android" aria-expanded="false" aria-controls="android">
-                        <i class="fa fa-android fa-lg"></i> Android Icon / Splash
+                </div>
+
+
+                <p>iOS - Splash  &nbsp; &nbsp; &nbsp; ( P - Portrait &nbsp; L - Landscap )</p>
+                <div class="icon-size">
+
+                    <button type="button" id="all-apple-splash" class="btn btn-primary apple" onClick="toggleAll(this,'.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                    </button>
+<!--Portrait-->
+                      <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1242x2208">iPhone 6+ P @3x
+                        <span>1242 x 2208</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="750x1334"> iPhone 6 P @2x
+                        <span>750 x 1334</span>
+                    </button>
+                     <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x960"> iPhone 4s P @2x
+                        <span>640 x 960</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1536x2048"> iPad P @2x
+                        <span>1536 x 2048</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="768x1024"> iPad P @1x
+                        <span>768 x 1024</span>
+                    </button>
+                     <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2732x2048">
+                        iPad Pro P @2x
+                        <span>2048 x 2732</span>
+                    </button>
+                   
+<!--Landscap-->
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2208x1242">
+                       iPhone 6+ L @3x
+                        <span>2208 x 1242</span>
+                    </button>
+                     <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1334x750">
+                        iPhone 6 L @2x
+                        <span>1334 x 750</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x640">
+                        iPhone 4s L @2x
+                        <span>960 x 640</span>
                     </button>
                     
-                    
-<!-- Collapse Apple Icon -->
- <div class="collapse" id="apple">
-                        <div class="well">
-
-                            <i class="fa fa-apple fa-2x"></i> IOS Icon / Splash
-                            <div class="clearfix divider"></div>
-                            <div class="row">
-<!-- Apple Icon -->
-                                <div class="col-xs-6">
-                                    <h4>ICON</h4>
-
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" id="all_ios_app_icon"> All
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_app_icon"> Normal
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_app_icon"> @2x
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_app_icon"> @3x
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_app_icon"> @4x
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_app_icon"> @5x
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- Apple Splash Screen -->
-                                <div class="col-xs-6">
-                                    <h4>SPLASH</h4>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" id="all_ios_splash"> All
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_splash"> normal
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_splash"> iPhone 4
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_splash"> iPhone 5s
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_splash"> iPhone 6
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="iOS_splash"> iPhone 6+
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- Collapse Android Icon -->
-                    <div class="collapse" id="android">
-                        <div class="well">
-                            <i class="fa fa-android fa-2x"></i> Android Icon / Splash
-                            <div class="clearfix divider"></div>
-                            <div class="row">
-<!-- Android Icon -->
-                                <div class="col-xs-6">
-                                    <h4>ICON</h4>
-
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" id="all_droid_icon"> All
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_icon"> Normal
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_icon"> @2x
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_icon"> @3x
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_icon"> @4x
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_icon"> @5x
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- Android Splash Screen -->
-                                <div class="col-xs-6">
-                                    <h4>SPLASH</h4>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" id="all_droid_splash"> All
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_splash"> normal
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_splash"> iPhone 4
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_splash"> iPhone 5s
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_splash"> iPhone 6
-                                        </label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" class="droid_splash"> iPhone 6+
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2048x1536">
+                        iPad L @2x
+                        <span>2048 x 1536</span>
+                    </button>
+                     
+                     <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1024x768">
+                        iPad L @1x
+                        <span>1024 x 768</span>
+                    </button>
+                   
+                    <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        iPad Pro L @2x
+                        <span>2732 x 2048</span>
+                    </button>
                 </div>
-                <button class="btn btn-primary btn-lg btn-block"><i class="fa fa-file-archive-o fa-lg"></i> Download Zip</button>
             </div>
 
+            <div class="icon" id="droid">
+
+                <p>Android - AppIcon</p>
+                <div class="icon-size">
+
+                    <button type="button" id="all-android-icon" class="btn btn-primary android" onClick="toggleAll(this,'.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" onClick="toggle(this,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        60
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" onClick="toggle(this,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        120
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" onClick="toggle(this,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        512
+                    </button>
+
+                </div>
+                <p>Android - Splash</p>
+                <div class="icon-size">
+
+                    <button type="button" id="all-android-splash" class="btn btn-primary android" onClick="toggleAll(this,'.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        400 x 800
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        1980 x 1280
+                    </button>
+                </div>
+                </div>
+            </div>
+        <!-- Icon Size Selection -->
+        <div class="col-md-4 preview">
+            <h3>Preview</h3>
+            <div class="app-icon">
+                <div class="textDisp"></div>
+                <div class="captionIcon"></div>
+            </div>
+            <div class="app-splash">
+                <div class="textDisp"></div>
+                <div class="captionSplash"></div>
+
+            </div>
         </div>
-    </div>
+        </div>
+    </section>
+        <section class="footer">
+            <div class="col-md-12">
+                <p>Created by <span><a href="http://www.mallow-tech.com">Mallow Technologies Private Limited.</a></span></p>
+                <p>For suggestions & improvements please <span><a href="http://www.mallow-tech.com">Contact us.</a></span></p>
+            </div>
+            <div class="col-md-12">
+                <a class="btn btn-lg">Download</a>
+            </div>
+        </section>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $('#apple').on('click', function() {
+            if ($(this).attr('aria-pressed') === 'false') {
+                $(".apple").removeAttr("disabled");
+                $('.apple').addClass('active');
+            } else {
+                $(".apple").attr("disabled", "disabled");
+                $('.apple').removeClass('active');
+            }
+        });
+        $('#android').on('click', function() {
+            if ($(this).attr('aria-pressed') === 'false') {
+                $(".android").removeAttr("disabled");
+                $('.android').addClass('active');
+            } else {
+                $(".android").attr("disabled", "disabled");
+                $('.android').removeClass('active');
+            }
+        });
+    </script>
     <script type="text/javascript">
-        $("#textInput")
+        $("#inputIcon")
             .keyup(function() {
                 var value = $(this).val();
                 $(".textDisp").text(value);
             })
 
-        $("#helptextInput")
+        $("#inputCaptionIcon")
             .keyup(function() {
                 var value = $(this).val();
-                $(".hlptextDisp").text(value);
+                $(".captionIcon").text(value);
+            })
+        $("#inputCaptionSplash")
+            .keyup(function() {
+                var value = $(this).val();
+                $(".captionSplash").text(value);
             })
             .keyup();
     </script>

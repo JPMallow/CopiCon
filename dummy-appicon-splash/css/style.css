@@ -1,83 +1,243 @@
 /* App Tool */
-.online-tool .divider {
-    border: 1px solid rgba(51, 153, 170, 0.3);
-    margin: 10px;
+
+body {
+    font-size: 16px;
 }
 
-/* Preview Div*/
-.online-tool .preview .appIcon {
-    height: 220px;
-    width: 220px;
-    background-color: #000;
-    border-radius: 50px;
-    margin: auto;
-}
-
-.online-tool .preview .splashScreen {
-    height: 300px;
-    width: 220px;
-    background-color: #000;
-    margin: auto;
-}
-.online-tool .preview .col-sm-6 {
-    color: #39a;
+.online-tool .header h4,
+.online-tool .header h2 {
     text-align: center;
 }
 
-.online-tool .preview .textDisp,
-.online-tool .preview .hlptextDisp {
+.online-tool .header {
+    padding-bottom: 40px;
+    padding-top: 25px;
+}
+.online-tool .btn {
+    box-shadow: none;
+}
+.online-tool p {
+    color: rgb(117, 117, 117);
+    font-size: 0.9em;
+    font-weight: 200;
+}
+.online-tool .header {
+    border-bottom: 1px solid rgba(225, 225, 225, 1);
+}
+.online-tool h3 {
+    color: rgb(117, 117, 117);
+    font-weight: 200;
+}
+.online-tool button span {
+    display: block;
+    font-size: 0.7em;
+}
+.online-tool .main .heading,
+.online-tool .preview h3 {
+    margin-top: 40px;
+}
+/* Heading */
+.online-tool .main .heading .numberCircle {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    font-size: 1.2em;
+    line-height: 1em;
+    border: 2px solid rgb(117, 117, 117);
+    position: relative;
+    margin-bottom: 20px;
+    color: rgb(117, 117, 117);
+}
+
+.online-tool .main .heading h3 {
+    position: absolute;
+    font-size: 24px;
+    width: 200px;
+    top: -20px;
+    left: 40px;
+    color: rgb(117, 117, 117);
+}
+
+.online-tool .main .heading .numberCircle span {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.online-tool .main .form-control {
+    border-radius: 0px;
+    height: 40px;
+}
+/* Button */
+.online-tool .main .btn {
+    outline: none;
+    background: #fff;
+    color: #a3a3a3;
+    border: 2px solid;
+    padding: 10px 40px;
+    border-radius: 0px;
+    margin-bottom: 5px;
+}
+
+.online-tool .main .icon-size {
+    margin-bottom: 20px;
+}
+
+.online-tool .main .icon-size .btn {
+    padding: 5px 0px;
+    height: 40px;
+    width: 89px; 
+    font-size: 0.66em;
+    text-align: center;
+}
+
+
+/* Footer */
+
+.online-tool .footer .col-md-12 {
+    text-align: center;
+    border-top: 1px solid #c8c8c8;
+    padding: 20px;
+}
+
+.online-tool .footer .col-md-12:last-child {
+    border-bottom: 1px solid #c8c8c8;
+    margin-bottom: 30px;
+}
+
+.online-tool .footer .col-md-12 span a {
+    color: #27b0ab;
+    text-decoration: none;
+}
+
+.online-tool .footer .btn {
+    border-radius: 0px;
+    background: #27b0ab;
     color: #fff;
-    text-align: center;
+    font-size: 25px;
+    padding: 10px 70px;
+    font-weight: 200;
 }
 
-.online-tool .preview .appIcon .textDisp {
+
+/*Preview*/
+
+.online-tool .preview .app-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.online-tool .preview .app-splash {
+    height: 450px;
+    width: 275px;
+}
+
+.online-tool .preview .app-icon,
+.online-tool .preview .app-splash {
+    margin-bottom: 15px;
+    text-align: center;
+    border: 2px solid #c8c8c8;
+}
+
+.online-tool .preview .textDisp {
+    color: #ed837e;
+}
+
+.online-tool .preview .captionIcon,
+.online-tool .preview .captionSplash {
+    color: rgb(117, 117, 117);
+}
+
+.online-tool .preview .app-icon .textDisp {
     font-size: 20px;
-    padding-top: 35%;
+    margin-top: 40%;
     text-align: center;
 }
 
-.online-tool .preview .splashScreen .textDisp {
-    padding-top: 55%;
-    text-align: center;
-    font-size: 20px;
+.online-tool .preview .app-splash .textDisp {
+    font-size: 35px;
+    margin-top: 73%;
 }
 
-.online-tool .preview .hlptextDisp {
+.online-tool .preview .app-icon .captionIcon {
     font-size: 13px;
 }
-.online-tool  button:last-child {
-   border-radius: 100px;
-    margin-bottom: 10px;
+
+.online-tool .preview .captionSplash {
+    font-size: 17px;
 }
 
-/* Panel */
 
+/*Hover Effect for Active Button*/
 
-.online-tool .panel-heading,
-.btn-primary {
-    background-color: #39a;
-    color: #fff;
-    border: 1px solid #39a;
+.online-tool .main .btn.active,
+.online-tool .main .btn:active {
+    border: 2px solid #27b0ab;
+    color: #28b0ab;
 }
 
-.btn-primary:hover,
-.btn.active.focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn:active:focus,
-.btn:focus {
-    background: #fff !important;
-    color: #39a;
-    border: 1px solid #39a;
-    outline: none;
+.online-tool .form-control:focus {
+    border: 1px solid #27b0ab;
+    color: #28b0ab;
+    box-shadow: inset 0 1px 1px rgba(39, 176, 171, 0.5);
 }
 
-.online-tool .panel-default .well {
-    background-color: #fff;
-    margin-top: 10px;
+.online-tool .main .btn.active:hover {
+    border: 2px solid #45BCC4;
+    color: #45BCC4;
 }
 
-.online-tool .panel-default {
-    border: 1px solid #39a;
+.online-tool .main .btn:hover {
+    border: 2px solid #FF7936;
+    color: #FF7936;
+}
+
+
+/* Hide Hover Effect for Disable Button*/
+
+.online-tool .main .btn.disabled:hover,
+.online-tool .main.btn[disabled],
+.btn[disabled]:hover,
+fieldset[disabled] .btn,
+fieldset[disabled] .btn:hover {
+    border: 2px solid rgba(170, 170, 170, 1) !important;
+    color: rgba(170, 170, 170, 1) !important;
+}
+
+
+/*Media Queries*/
+
+@media (min-width:768px) {
+    .online-tool .main .heading, .online-tool .preview h3 {
+        margin-top: 70px;
+    }
+    .online-tool .main .btn {
+        padding: 20px 50px;
+        margin-right: 5px
+    }
+    .online-tool .main .icon-size .btn {
+        padding: 10px 0px;
+        width: 135px;
+        height: 55px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 991px) {
+    .online-tool .preview .app-icon, .online-tool .preview .app-splash {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width:992px) {
+    .online-tool .col-md-8.main {
+        border-right: 1px solid rgba(225, 225, 225, 1);
+    }
 }
