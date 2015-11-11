@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <title>CopiCon</title>
 
@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="container online-tool">
+<body class="container copicon">
     <section>
         <div class="header">
             <h2>CopiCon</h2>
@@ -28,7 +28,7 @@
             <div class="col-md-8 main">
                 <div class="heading">
 
-                    <div class="numberCircle">
+                    <div class="number-circle">
                         <h3>App name</h3>
                         <span>1</span>
                     </div>
@@ -46,11 +46,12 @@
 
                 </div>
                 <div class="heading">
-                    <div class="numberCircle">
+                    <div class="number-circle">
                         <h3>Choose Platform</h3>
                         <span>2</span>
                     </div>
                 </div>
+                <!--                -->
                 <div>
                     <button type="button" id="apple" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
                         <i class="fa fa-apple fa-4x"></i>
@@ -61,17 +62,16 @@
                 </div>
 
                 <div class="heading">
-                    <div class="numberCircle">
+                    <div class="number-circle">
                         <h3>Choose Size</h3>
                         <span>3</span>
                     </div>
-                    <h3></h3>
-                </div>
 
-                <div class="icon" id="ios">
+                </div>
+                <div class="icon">
                     <p>iOS - AppIcon</p>
                     <div class="icon-size">
-
+                        <!-- Apple Icon-->
 
                         <button type="button" id="all-apple-icon" class="btn btn-primary apple" onClick="toggleAll(this,'.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
                             All
@@ -97,13 +97,13 @@
                     </div>
 
 
-                    <p>iOS - Splash &nbsp; &nbsp; &nbsp; ( P - Portrait &nbsp; L - Landscap )</p>
+                    <p>iOS - Splash <span>( P - Portrait &nbsp; L - Landscape )</span></p>
                     <div class="icon-size">
 
                         <button type="button" id="all-apple-splash" class="btn btn-primary apple" onClick="toggleAll(this,'.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
                             All
                         </button>
-                        <!--Portrait-->
+                        <!-- Apple SplashPortrait-->
                         <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1242x2208">iPhone 6+ P
                             <span>1242 x 2208</span>
                         </button>
@@ -127,7 +127,7 @@
                             <span>2048 x 2732</span>
                         </button>
 
-                        <!--Landscap-->
+                        <!-- Apple splash Landscape-->
                         <button type="button" class="btn btn-primary apple apple-splash" onClick="toggle(this,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2208x1242">
                             iPhone 6+ L
                             <span>2208 x 1242</span>
@@ -160,12 +160,12 @@
                         </button>
                     </div>
                 </div>
-
-                <div class="icon" id="droid">
+                <!-- Android Icon/Splash  -->
+                <div>
 
                     <p>Android - AppIcon</p>
                     <div class="icon-size">
-
+                        <!-- Android Icon -->
                         <button type="button" id="all-android-icon" class="btn btn-primary android" onClick="toggleAll(this,'.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
                             All
                         </button>
@@ -182,46 +182,51 @@
                         </button>
 
                     </div>
-                    <p>Android - Splash &nbsp; &nbsp; &nbsp; ( P - Portrait &nbsp; L - Landscap )</p>
+                    <!-- Android Splash -->
+                    <p>Android - Splash <span> ( P - Portrait &nbsp; L - Landscape )</span></p>
                     <div class="icon-size">
 
                         <button type="button" id="all-android-splash" class="btn btn-primary android" onClick="toggleAll(this,'.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
                             All
                         </button>
                         <!--Android Portrait-->
-                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x720"> xlarge P <span>960dp x 720dp</span>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="720x960"> xlarge P <span>720dp x 960dp</span>
                         </button>
-                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x480">larger P <span>640dp x 480dp</span>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="480x640">larger P <span>480dp x 640dp</span>
                         </button>
-                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="470x320">normal P <span>470dp x 320dp</span>
-                            <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="426x320">small P <span>426 dp x 320dp</span>
-                            </button>
-                            <!--Android Landscap-->
-                            <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="720x960"> xlarge L <span>720dp x 960dp</span>
-                            </button>
-                            <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="480x640">larger L <span>480dp x 640dp</span>
-                            </button>
-                            <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x470">normal L <span>320dp x 470dp</span>
-                                <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x426">small L <span>320 dp x 426dp</span>
-                                </button>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x470">normal P <span>320dp x 470dp</span>
+                        </button>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x426">small P <span>320dp x 426dp</span>
+                        </button>
+
+                        <!--Android Landscape-->
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x720"> xlarge L <span>960dp x 720dp</span>
+                        </button>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x480">larger L <span>640dp x 480dp</span>
+                        </button>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="470x320">normal L <span>470dp x 320dp</span></button>
+                        <button type="button" class="btn btn-primary android android-splash" onClick="toggle(this,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="426x320">small L <span>426dp x 320dp</span>
+                        </button>
+
                     </div>
                 </div>
             </div>
-            <!-- Icon Size Selection -->
+            <!-- Preview -->
             <div class="col-md-4 preview">
                 <h3>Preview</h3>
                 <div class="app-icon">
-                    <div class="textDisp"></div>
-                    <div class="captionIcon"></div>
+                    <div class="text-disp"></div>
+                    <div class="caption-icon"></div>
                 </div>
                 <div class="app-splash">
-                    <div class="textDisp"></div>
-                    <div class="captionSplash"></div>
+                    <div class="text-disp"></div>
+                    <div class="caption-splash"></div>
 
                 </div>
             </div>
         </div>
     </section>
+    <!-- Footer -->
     <section class="footer">
         <div class="col-md-12">
             <p>Created by <span><a href="http://www.mallow-tech.com">Mallow Technologies Private Limited.</a></span></p>
@@ -255,23 +260,22 @@
                 $('.android').removeClass('active');
             }
         });
-    </script>
-    <script type="text/javascript">
+
         $("#inputIcon")
             .keyup(function() {
                 var value = $(this).val();
-                $(".textDisp").text(value);
+                $(".text-disp").text(value);
             })
 
         $("#inputCaptionIcon")
             .keyup(function() {
                 var value = $(this).val();
-                $(".captionIcon").text(value);
+                $(".caption-icon").text(value);
             })
         $("#inputCaptionSplash")
             .keyup(function() {
                 var value = $(this).val();
-                $(".captionSplash").text(value);
+                $(".caption-splash").text(value);
             })
             .keyup();
     </script>
