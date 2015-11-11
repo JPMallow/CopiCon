@@ -13,30 +13,39 @@ body {
     padding-bottom: 40px;
     padding-top: 25px;
 }
+
 .online-tool .btn {
     box-shadow: none;
 }
+
 .online-tool p {
     color: rgb(117, 117, 117);
     font-size: 0.9em;
     font-weight: 200;
 }
+
 .online-tool .header {
     border-bottom: 1px solid rgba(225, 225, 225, 1);
 }
+
 .online-tool h3 {
     color: rgb(117, 117, 117);
     font-weight: 200;
 }
+
 .online-tool button span {
     display: block;
     font-size: 0.7em;
 }
+
 .online-tool .main .heading,
 .online-tool .preview h3 {
     margin-top: 40px;
 }
+
+
 /* Heading */
+
 .online-tool .main .heading .numberCircle {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -74,7 +83,10 @@ body {
     border-radius: 0px;
     height: 40px;
 }
+
+
 /* Button */
+
 .online-tool .main .btn {
     outline: none;
     background: #fff;
@@ -92,7 +104,7 @@ body {
 .online-tool .main .icon-size .btn {
     padding: 5px 0px;
     height: 40px;
-    width: 89px; 
+    width: 89px;
     font-size: 0.66em;
     text-align: center;
 }
@@ -193,10 +205,13 @@ body {
     color: #45BCC4;
 }
 
+
+/*
 .online-tool .main .btn:hover {
     border: 2px solid #FF7936;
     color: #FF7936;
 }
+*/
 
 
 /* Hide Hover Effect for Disable Button*/
