@@ -1,0 +1,222 @@
+<section>
+    <div class="header">
+        <h2>CopiCon</h2>
+        <h4><small>Sample Appicon &amp; Splash for mobile</small></h4>
+    </div>
+</section>
+<section>
+
+    <div class="row">
+        <div class="col-md-8 main">
+            <div class="heading">
+
+                <div class="number-circle">
+                    <h3>App name</h3>
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="inputIcon" placeholder="Apex">
+
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="inputCaptionIcon" placeholder="Caption Icon">
+
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" id="inputCaptionSplash" placeholder="Caption Splash">
+
+            </div>
+            <div class="heading">
+                <div class="number-circle">
+                    <h3>Choose Platform</h3>
+                    <span>2</span>
+                </div>
+            </div>
+            <!--                -->
+            <div>
+                <button type="button" id="apple" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <i class="fa fa-apple fa-4x"></i>
+                </button>
+                <button type="button" id="android" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    <i class="fa fa-android fa-4x"></i>
+                </button>
+            </div>
+
+            <div class="heading">
+                <div class="number-circle">
+                    <h3>Choose Size</h3>
+                    <span>3</span>
+                </div>
+
+            </div>
+            <div class="icon">
+                <p>iOS - AppIcon</p>
+                <div class="icon-size">
+                    <!-- Apple Icon-->
+
+                    <button type="button" id="all-apple-icon" class="btn btn-primary apple" ng-click="toggleAll($event,'.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="180x180">3x
+                        <span>180 x 180</span>
+
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="120x120">2x
+                        <span>120 X 120</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="76x76"> iPad - 1x <span>76 x 76</span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="152x152">iPad - 2x
+                        <span>152 x 152</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="167x167">iPad Pro - 2x
+                        <span> 167 x 167</span>
+                    </button>
+
+                </div>
+
+
+                <p>iOS - Splash <span>( P - Portrait &nbsp; L - Landscape )</span></p>
+                <div class="icon-size">
+
+                    <button type="button" id="all-apple-splash" class="btn btn-primary apple" ng-click="toggleAll($event,'.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                    </button>
+                    <!-- Apple SplashPortrait-->
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1242x2208">iPhone 6+ P
+                        <span>1242 x 2208</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="750x1334"> iPhone 6 P
+                        <span>750 x 1334</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1136x5640"> iPhone 5 P
+                        <span>1136 x 5640</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x960"> iPhone 4s P
+                        <span>640 x 960</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1536x2048"> iPad P
+                        <span>1536 x 2048</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="768x1024"> iPad P
+                        <span>768 x 1024</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2732x2048">
+                        iPad Pro P
+                        <span>2048 x 2732</span>
+                    </button>
+
+                    <!-- Apple splash Landscape-->
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2208x1242">
+                        iPhone 6+ L
+                        <span>2208 x 1242</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1334x750">
+                        iPhone 6 L
+                        <span>1334 x 750</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="5640x1136"> iPhone 5 L
+                        <span>5640 x 1136</span>
+                    </button>
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x640">
+                        iPhone 4s L
+                        <span>960 x 640</span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2048x1536">
+                        iPad L
+                        <span>2048 x 1536</span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1024x768">
+                        iPad L
+                        <span>1024 x 768</span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        iPad Pro L
+                        <span>2732 x 2048</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Android Icon/Splash  -->
+            <div>
+
+                <p>Android - AppIcon</p>
+                <div class="icon-size">
+                    <!-- Android Icon -->
+                    <button type="button" id="all-android-icon" class="btn btn-primary android" ng-click="toggleAll($event,'.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="36x36"> ldpi <span>36 x 36</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="48x48">mdpi <span>48 x 48</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="96x96">xhdpi <span>96 x 96</span>
+                    </button>
+
+                    <button type="button" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="144x144">xxhdpi <span>144 x 144</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="192x192">xxxhdpi <span>192 x 192</span>
+                    </button>
+
+                </div>
+                <!-- Android Splash -->
+                <p>Android - Splash <span> ( P - Portrait &nbsp; L - Landscape )</span></p>
+                <div class="icon-size">
+
+                    <button type="button" id="all-android-splash" class="btn btn-primary android" ng-click="toggleAll($event,'.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                        All
+                    </button>
+                    <!--Android Portrait-->
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="720x960"> xlarge P <span>720dp x 960dp</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="480x640">larger P <span>480dp x 640dp</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x470">normal P <span>320dp x 470dp</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x426">small P <span>320dp x 426dp</span>
+                    </button>
+
+                    <!--Android Landscape-->
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x720"> xlarge L <span>960dp x 720dp</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x480">larger L <span>640dp x 480dp</span>
+                    </button>
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="470x320">normal L <span>470dp x 320dp</span></button>
+                    <button type="button" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="426x320">small L <span>426dp x 320dp</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Preview -->
+        <div class="col-md-4 preview">
+            <h3>Preview</h3>
+            <div class="app-icon">
+                <div class="text-disp"></div>
+                <div class="caption-icon"></div>
+            </div>
+            <div class="app-splash">
+                <div class="text-disp"></div>
+                <div class="caption-splash"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<section class="footer">
+    <div class="col-md-12">
+        <p>Created by <span><a href="http://www.mallow-tech.com">Mallow Technologies Private Limited.</a></span></p>
+        <p>For suggestions & improvements please <span><a href="http://www.mallow-tech.com">Contact us.</a></span></p>
+
+    </div>
+    <div class="col-md-12">
+        <a class="btn btn-lg">Download</a>
+    </div>
+</section>
+
