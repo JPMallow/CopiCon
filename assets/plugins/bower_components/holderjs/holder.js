@@ -2584,17 +2584,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function outlinePath (bgWidth, bgHeight, outlineWidth) {
 	  var outlineOffsetWidth = outlineWidth / 2;
+                                                                             
+                                                                             /* Mallow changed code to remove the diagonals in the outline property */
 
+//                                                                             return [
+//                                                                                     'M', outlineOffsetWidth, outlineOffsetWidth,
+//                                                                                     'H', bgWidth - outlineOffsetWidth,
+//                                                                                     'V', bgHeight - outlineOffsetWidth,
+//                                                                                     'H', outlineOffsetWidth,
+//                                                                                     'V', 0,
+//                                                                                     'M', 0, outlineOffsetWidth,
+//                                                                                     'L', bgWidth, bgHeight - outlineOffsetWidth,
+//                                                                                     'M', 0, bgHeight - outlineOffsetWidth,
+//                                                                                     'L', bgWidth, outlineOffsetWidth
+//                                                                                     ].join(' ');
+                                                                             
 	  return [
 	    'M', outlineOffsetWidth, outlineOffsetWidth,
 	    'H', bgWidth - outlineOffsetWidth,
 	    'V', bgHeight - outlineOffsetWidth,
 	    'H', outlineOffsetWidth,
 	    'V', 0,
-	    'M', 0, outlineOffsetWidth,
-	    'L', bgWidth, bgHeight - outlineOffsetWidth,
-	    'M', 0, bgHeight - outlineOffsetWidth,
-	    'L', bgWidth, outlineOffsetWidth
+	    'M', 0, 0,
+	    'L', 0, 0,
+	    'M', 0, 0,
+	    'L', 0, 0
 	  ].join(' ');
 	}
 
