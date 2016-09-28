@@ -35,10 +35,10 @@
             </div>
             <!--                -->
             <div>
-                <button type="button" id="apple" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button type="button" id="apple" class="btn btn-primary" ng-click="appleButtonClicked()" data-toggle="button" aria-pressed="false" autocomplete="off">
                     <i class="fa fa-apple fa-4x"></i>
                 </button>
-                <button type="button" id="android" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                <button type="button" id="android" class="btn btn-primary" ng-click="androidButtonClicked()" data-toggle="button" aria-pressed="false" autocomplete="off">
                     <i class="fa fa-android fa-4x"></i>
                 </button>
             </div>
@@ -55,24 +55,24 @@
                 <div class="icon-size">
                     <!-- Apple Icon-->
 
-                    <button type="button" id="all-apple-icon" class="btn btn-primary apple" ng-click="toggleAll($event,'.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                    <button type="button" id="all-apple-icon" class="btn btn-primary apple" ng-class="{active : alliOSIconSelected == true}" ng-click="toggleAll($event,'.apple-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked">
                         All
 
                     </button>
-                    <button type="button" id="ios_3x_icon" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="180x180">3x
+                    <button type="button" id="ios_3x_icon" class="btn btn-primary apple apple-icon" ng-class="{active : availableSizes.ios_3x_icon.selected == true}" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="180x180">3x
                         <span>180 x 180</span>
 
                     </button>
-                    <button type="button" id="ios_2x_icon" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="120x120">2x
+                    <button type="button" id="ios_2x_icon" class="btn btn-primary apple apple-icon" ng-class="{active : availableSizes.ios_2x_icon.selected == true}" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="120x120">2x
                         <span>120 X 120</span>
                     </button>
-                    <button type="button" id="ipad_1x_icon" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="76x76"> iPad - 1x <span>76 x 76</span>
+                    <button type="button" id="ipad_1x_icon" class="btn btn-primary apple apple-icon" ng-class="{active : availableSizes.ipad_1x_icon.selected == true}" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="76x76"> iPad - 1x <span>76 x 76</span>
                     </button>
 
-                    <button type="button" id="ipad_2x_icon" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="152x152">iPad - 2x
+                    <button type="button" id="ipad_2x_icon" class="btn btn-primary apple apple-icon" ng-class="{active : availableSizes.ipad_2x_icon.selected == true}" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="152x152">iPad - 2x
                         <span>152 x 152</span>
                     </button>
-                    <button type="button" id="ipadpro_2x_icon" class="btn btn-primary apple apple-icon" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="167x167">iPad Pro - 2x
+                    <button type="button" id="ipadpro_2x_icon" class="btn btn-primary apple apple-icon" ng-class="{active : availableSizes.ipadpro_2x_icon.selected == true}" ng-click="toggle($event,'#all-apple-icon','.apple-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="167x167">iPad Pro - 2x
                         <span> 167 x 167</span>
                     </button>
 
@@ -81,62 +81,62 @@
                 <p>iOS - Splash <span>( P - Portrait &nbsp; L - Landscape )</span></p>
                 <div class="icon-size">
 
-                    <button type="button" id="all-apple-splash" class="btn btn-primary apple" ng-click="toggleAll($event,'.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                    <button type="button" id="all-apple-splash" class="btn btn-primary apple" ng-class="{active : alliOSSplashSelected == true}" ng-click="toggleAll($event,'.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked">
                         All
                     </button>
                     <!-- Apple SplashPortrait-->
-                    <button type="button" id="iphone6+p_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1242x2208">iPhone 6+ P
+                    <button type="button" id="iphone6plusp_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone6plusp_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="1242x2208">iPhone 6+ P
                         <span>1242 x 2208</span>
                     </button>
-                    <button type="button" id="iphone6p_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="750x1334"> iPhone 6 P
+                    <button type="button" id="iphone6p_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone6p_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="750x1334"> iPhone 6 P
                         <span>750 x 1334</span>
                     </button>
-                    <button type="button" id="iphone5p_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1136x5640"> iPhone 5 P
+                    <button type="button" id="iphone5p_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone5p_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="1136x5640"> iPhone 5 P
                         <span>1136 x 5640</span>
                     </button>
-                    <button type="button" id="iphone4sp_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x960"> iPhone 4s P
+                    <button type="button" id="iphone4sp_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone4sp_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="640x960"> iPhone 4s P
                         <span>640 x 960</span>
                     </button>
-                    <button type="button" id="ipad1p_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1536x2048"> iPad P
+                    <button type="button" id="ipad1p_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.ipad1p_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="1536x2048"> iPad P
                         <span>1536 x 2048</span>
                     </button>
-                    <button type="button" id="ipad2p_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="768x1024"> iPad P
+                    <button type="button" id="ipad2p_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.ipad2p_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="768x1024"> iPad P
                         <span>768 x 1024</span>
                     </button>
-                    <button type="button" id="ipadprop_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2732x2048">
+                    <button type="button" id="ipadprop_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.ipadprop_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="2732x2048">
                         iPad Pro P
                         <span>2048 x 2732</span>
                     </button>
 
 
                     <!-- Apple splash Landscape-->
-                    <button type="button" id="iphone6+l_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2208x1242">
+                    <button type="button" id="iphone6plusl_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone6plusl_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="2208x1242">
                         iPhone 6+ L
                         <span>2208 x 1242</span>
                     </button>
-                    <button type="button" id="iphone6l_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1334x750">
+                    <button type="button" id="iphone6l_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone6l_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="1334x750">
                         iPhone 6 L
                         <span>1334 x 750</span>
                     </button>
-                    <button type="button" id="iphone5l_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="5640x1136"> iPhone 5 L
+                    <button type="button" id="iphone5l_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone5l_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="5640x1136"> iPhone 5 L
                         <span>5640 x 1136</span>
                     </button>
-                    <button type="button" id="iphone4sl_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x640">
+                    <button type="button" id="iphone4sl_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.iphone4sl_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="960x640">
                         iPhone 4s L
                         <span>960 x 640</span>
                     </button>
 
-                    <button type="button" id="ipad1l_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="2048x1536">
+                    <button type="button" id="ipad1l_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.ipad1l_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="2048x1536">
                         iPad L
                         <span>2048 x 1536</span>
                     </button>
 
-                    <button type="button" id="ipad2l_splash"  class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="1024x768">
+                    <button type="button" id="ipad2l_splash"  class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.ipad2l_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked" value="1024x768">
                         iPad L
                         <span>1024 x 768</span>
                     </button>
 
-                    <button type="button" id="ipadprol_splash" class="btn btn-primary apple apple-splash" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                    <button type="button" id="ipadprol_splash" class="btn btn-primary apple apple-splash" ng-class="{active : availableSizes.ipadprol_splash.selected == true}" ng-click="toggle($event,'#all-apple-splash','.apple-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAppleButtonClicked">
                         iPad Pro L
                         <span>2732 x 2048</span>
                     </button>
@@ -149,19 +149,19 @@
                 <p>Android - AppIcon</p>
                 <div class="icon-size">
                     <!-- Android Icon -->
-                    <button type="button" id="all-android-icon" class="btn btn-primary android" ng-click="toggleAll($event,'.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                    <button type="button" id="all-android-icon" class="btn btn-primary android" ng-class="{active : allAndroidIconSelected == true}" ng-click="toggleAll($event,'.android-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked">
                         All
                     </button>
-                    <button type="button" id="android_idpi_icon" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="36x36"> ldpi <span>36 x 36</span>
+                    <button type="button" id="android_idpi_icon" class="btn btn-primary android android-icon" ng-class="{active : availableSizes.android_idpi_icon.selected == true}" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="36x36"> ldpi <span>36 x 36</span>
                     </button>
-                    <button type="button" id="android_mdpi_icon" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="48x48">mdpi <span>48 x 48</span>
+                    <button type="button" id="android_mdpi_icon" class="btn btn-primary android android-icon" ng-class="{active : availableSizes.android_mdpi_icon.selected == true}" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="48x48">mdpi <span>48 x 48</span>
                     </button>
-                    <button type="button" id="android_xhdpi_icon" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="96x96">xhdpi <span>96 x 96</span>
+                    <button type="button" id="android_xhdpi_icon" class="btn btn-primary android android-icon" ng-class="{active : availableSizes.android_xhdpi_icon.selected == true}" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="96x96">xhdpi <span>96 x 96</span>
                     </button>
 
-                    <button type="button" id="android_xxhdpi_icon" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="144x144">xxhdpi <span>144 x 144</span>
+                    <button type="button" id="android_xxhdpi_icon" class="btn btn-primary android android-icon" ng-class="{active : availableSizes.android_xxhdpi_icon.selected == true}" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="144x144">xxhdpi <span>144 x 144</span>
                     </button>
-                    <button type="button" id="android_xxxhdpi_icon" class="btn btn-primary android android-icon" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" disabled="disabled" value="192x192">xxxhdpi <span>192 x 192</span>
+                    <button type="button" id="android_xxxhdpi_icon" class="btn btn-primary android android-icon" ng-class="{active : availableSizes.android_xxxhdpi_icon.selected == true}" ng-click="toggle($event,'#all-android-icon','.android-icon')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="192x192">xxxhdpi <span>192 x 192</span>
                     </button>
 
                 </div>
@@ -170,26 +170,26 @@
                 <p>Android - Splash <span> ( P - Portrait &nbsp; L - Landscape )</span></p>
                 <div class="icon-size">
 
-                    <button type="button" id="all-android-splash" class="btn btn-primary android" ng-click="toggleAll($event,'.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled">
+                    <button type="button" id="all-android-splash" class="btn btn-primary android" ng-class="{active : allAndroidSplashSelected == true}" ng-click="toggleAll($event,'.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked">
                         All
                     </button>
                     <!--Android Portrait-->
-                    <button type="button" id="android_xlargep_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="720x960"> xlarge P <span>720dp x 960dp</span>
+                    <button type="button" id="android_xlargep_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_xlargep_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="720x960"> xlarge P <span>720dp x 960dp</span>
                     </button>
-                    <button type="button" id="android_largerp_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="480x640">larger P <span>480dp x 640dp</span>
+                    <button type="button" id="android_largerp_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_largerp_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="480x640">larger P <span>480dp x 640dp</span>
                     </button>
-                    <button type="button" id="android_normalp_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x470">normal P <span>320dp x 470dp</span>
+                    <button type="button" id="android_normalp_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_normalp_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="320x470">normal P <span>320dp x 470dp</span>
                     </button>
-                    <button type="button" id="android_smallp_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="320x426">small P <span>320dp x 426dp</span>
+                    <button type="button" id="android_smallp_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_smallp_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="320x426">small P <span>320dp x 426dp</span>
                     </button>
 
                     <!--Android Landscape-->
-                    <button type="button" id="android_xlargel_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="960x720"> xlarge L <span>960dp x 720dp</span>
+                    <button type="button" id="android_xlargel_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_xlargel_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="960x720"> xlarge L <span>960dp x 720dp</span>
                     </button>
-                    <button type="button" id="android_largerl_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="640x480">larger L <span>640dp x 480dp</span>
+                    <button type="button" id="android_largerl_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_largerl_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="640x480">larger L <span>640dp x 480dp</span>
                     </button>
-                    <button type="button" id="android_normall_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="470x320">normal L <span>470dp x 320dp</span></button>
-                    <button type="button" id="android_smalll_splash" class="btn btn-primary android android-splash" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" disabled="disabled" value="426x320">small L <span>426dp x 320dp</span>
+                    <button type="button" id="android_normall_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_normall_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="470x320">normal L <span>470dp x 320dp</span></button>
+                    <button type="button" id="android_smalll_splash" class="btn btn-primary android android-splash" ng-class="{active : availableSizes.android_smalll_splash.selected == true}" ng-click="toggle($event,'#all-android-splash','.android-splash')" aria-pressed="false" autocomplete="off" ng-disabled="!isAndroidButtonClicked" value="426x320">small L <span>426dp x 320dp</span>
                     </button>
 
                 </div>
@@ -217,7 +217,7 @@
 
     </div>
     <div class="col-md-12">
-        <a class="btn btn-lg" id="download">Download</a>
+        <a class="btn btn-lg" id="download" ng-click="downloadButtonClicked">Download</a>
     </div>
 </section>
 
