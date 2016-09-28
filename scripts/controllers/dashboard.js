@@ -6,13 +6,21 @@ angular.module('dummyAppIconApp')
 
 /* Declarations */
 
+	var fontName = "Helvetica";
+	var fontWeight = "normal";
+	var backgroundColor = "#fff";
+	var foregroundColor = "#00AEEF";
+	 
     var iconHeight = 160;
     var iconWidth = 160;
     var splashHeight = 480;
     var splashWidth = 320;
-    var appName = "App";
-    var iconCaption = "icon comes here";
-    var splashCaption = "splash comes here";
+    var iOSIcons = ["ios_3x_icon", "ios_2x_icon", "ipad_1x_icon", "ipad_2x_icon", "ipadpro_2x_icon"];
+    var iOSSplash = ["iphone6plusp_splash", "iphone6p_splash", "iphone5p_splash", "iphone4sp_splash", "ipad1p_splash", "ipad2p_splash", "ipadprop_splash", "iphone6plusl_splash", "iphone6l_splash", "iphone5l_splash", "iphone4sl_splash", "ipad1l_splash", "ipad2l_splash", "ipadprol_splash"];
+    var androidIcons = ["android_idpi_icon", "android_mdpi_icon", "android_xhdpi_icon", "android_xxhdpi_icon", "android_xxxhdpi_icon"];
+    var androidSplash = ["android_xlargep_splash", "android_largerp_splash", "android_normalp_splash", "android_smallp_splash", "android_xlargel_splash", "android_largerl_splash", "android_normall_splash", "android_smalll_splash"];
+    
+    $scope.appName = "";
     $scope.isAppleButtonClicked = false;
     $scope.isAndroidButtonClicked = false;
     $scope.alliOSIconSelected = false;
@@ -24,7 +32,7 @@ angular.module('dummyAppIconApp')
         ios_3x_icon: {
             height: 180,
             width: 180,
-            size: 24,
+            size: 17,
             selected: false
         },
         ios_2x_icon: {
@@ -36,156 +44,211 @@ angular.module('dummyAppIconApp')
         ipad_1x_icon: {
             height: 76,
             width: 76,
-            size: 8,
+            size: 7,
             selected: false
         },
         ipad_2x_icon: {
             height: 152,
             width: 152,
+			size: 15,
             selected: false
         },
         ipadpro_2x_icon: {
             height: 167,
             width: 167,
+            size: 16,
             selected: false
         },
         iphone6plusp_splash: {
             height: 1242,
             width: 2208,
+            size: 60,
             selected: false
         },
         iphone6p_splash: {
             height: 750,
             width: 1334,
+            size: 36,
             selected: false
         },
         iphone5p_splash: {
             height: 1136,
             width: 640,
+            size: 31,
             selected: false
         },
         iphone4sp_splash: {
             height: 640,
             width: 960,
+            size: 31,
             selected: false
         },
         ipad1p_splash: {
             height: 1536,
             width: 2048,
+            size: 37,
             selected: false
         },
         ipad2p_splash: {
             height: 768,
             width: 1024,
+            size: 74,
             selected: false
         },
         ipadprop_splash: {
             height: 2048,
             width: 2732,
+            size: 99,
             selected: false
         },
         iphone6plusl_splash: {
             height: 2208,
             width: 1242,
+            size: 60,
             selected: false
         },
         iphone6l_splash: {
             height: 1334,
             width: 750,
+            size: 36,
             selected: false
         },
         iphone5l_splash: {
             height: 640,
             width: 1136,
+            size: 31,
             selected: false
         },
         iphone4sl_splash: {
             height: 960,
             width: 640,
+            size: 31,
             selected: false
         },
         ipad1l_splash: {
             height: 2048,
             width: 1536,
+            size: 37,
             selected: false
         },
         ipad2l_splash: {
             height: 1024,
             width: 768,
+            size: 74,
             selected: false
         },
         ipadprol_splash: {
             height: 2732,
             width: 2048,
+            size: 99,
             selected: false
         },
         android_idpi_icon: {
             height: 36,
             width: 36,
+            size: 3,
             selected: false
         },
         android_mdpi_icon: {
             height: 48,
             width: 48,
+            size: 5,
             selected: false
         },
         android_xhdpi_icon: {
             height: 96,
             width: 96,
+            size: 9,
             selected: false
         },
         android_xxhdpi_icon: {
             height: 144,
             width: 144,
+            size: 14,
             selected: false
         },
         android_xxxhdpi_icon: {
             height: 192,
             width: 192,
+            size: 19,
             selected: false
         },
         android_xlargep_splash: {
             height: 720,
             width: 960,
+            size: 35,
             selected: false
         },
         android_largerp_splash: {
             height: 480,
             width: 640,
+            size: 23,
             selected: false
         },
         android_normalp_splash: {
             height: 320,
             width: 470,
+            size: 15,
             selected: false
         },
         android_smallp_splash: {
             height: 320,
             width: 426,
+            size: 15,
             selected: false
         },
         android_xlargel_splash: {
             height: 960,
             width: 720,
+            size: 35,
             selected: false
         },
         android_largerl_splash: {
             height: 640,
             width: 480,
+            size: 23,
             selected: false
         },
         android_normall_splash: {
             height: 470,
             width: 320,
+            size: 15,
             selected: false
         },
         android_smalll_splash: {
             height: 426,
             width: 320,
+            size: 15,
             selected: false
         }
     }
-    
+
+/* Holde JS configuration */
+
+	Holder.run({
+  		themes: {
+    		"simple": {
+      			bg: backgroundColor,
+      			fg: foregroundColor,
+      			font: fontName,
+      			fontweight: fontWeight,
+    		}
+  		},
+  		images: "#app_icon_preview"
+	});
+	
+	Holder.run({
+  		themes: {
+    		"simple": {
+      			bg: backgroundColor,
+      			fg: foregroundColor,
+      			font: fontName,
+      			fontweight: fontWeight,
+    		}
+  		},
+  		images: "#app_splash_preview"
+	});
+	
 /* Custom helper methods */
 
     function convertImgToBase64URL(url, key, callback, outputFormat) {
@@ -211,7 +274,7 @@ angular.module('dummyAppIconApp')
         var img = zip.folder("images");
         for (var i = 0; i < images.length; i++) {
             var base64Data = images[i].data.replace(/^data:image\/png;base64,/, "")
-            img.file(images[i].model + ".png", base64Data, {
+            img.file(images[i].key + ".png", base64Data, {
                 base64: true
             });
         }
@@ -223,43 +286,48 @@ angular.module('dummyAppIconApp')
 
     }
     
-    var updatePreview = function() {
+    $scope.updatePreview = function() {
 
         /* Icon prview */
-        var iconText = "";
-        if (appName.length > 0 || iconCaption.length > 0) {
-            iconText = "&text=" + appName + " \\n " + iconCaption;
-        }
-
-        var dataSource = "holder.js/" + iconHeight + "x" + iconWidth + "?bg=#fff&fg=#D3D3D3&outline=yes" + iconText;
+        var dataSource = "holder.js/" + iconHeight + "x" + iconWidth + "?theme=simple&outline=yes&text=" + $scope.appName;
         var image = $("<img>").attr({
             "data-src": dataSource,
             "id": "app_icon_preview"
         })
 
-        Holder.run({
-            images: image[0]
-        });
-
+		Holder.run({
+  			themes: {
+    			"simple": {
+      				bg: backgroundColor,
+	      			fg: foregroundColor,
+    	  			font: fontName,
+      				fontweight: fontWeight,
+    			}
+	  		},
+  			images: image[0]
+		});
+	
         $("#app_icon_preview").replaceWith(image);
 
-
-        /* Splash prview */
-        var splashText = "";
-        if (appName.length > 0 || splashCaption.length > 0) {
-            splashText = "&text=" + appName + " \\n " + splashCaption;
-        }
-
-        var splashDataSource = "holder.js/" + splashWidth + "x" + splashHeight + "?bg=#fff&fg=#D3D3D3&outline=yes" + splashText;
+		/* Splash preview */
+        var splashDataSource = "holder.js/" + splashWidth + "x" + splashHeight + "?theme=simple&outline=yes&text=" + $scope.appName;
         var splashImage = $("<img>").attr({
             "data-src": splashDataSource,
             "id": "app_splash_preview"
         })
 
-        Holder.run({
-            images: splashImage[0]
-        });
-
+		Holder.run({
+  			themes: {
+    			"simple": {
+      				bg: backgroundColor,
+	      			fg: foregroundColor,
+    	  			font: fontName,
+      				fontweight: fontWeight,
+    			}
+	  		},
+  			images: splashImage[0]
+		});
+		
         $("#app_splash_preview").replaceWith(splashImage);
 
     }
@@ -283,6 +351,20 @@ angular.module('dummyAppIconApp')
         }
     }
 
+	var isAllSelected = function(keys) {
+		var allSelected = true;
+		for (var key in $scope.availableSizes) {
+			var found = $.inArray(key, keys) > -1;
+			if (found && $scope.availableSizes[key].selected == false) {
+				allSelected = false;
+				break;
+			}
+		}
+		
+		return allSelected;
+	}
+	
+	
 /* Listener methods */
 
 	$scope.appleButtonClicked = function() {
@@ -308,27 +390,29 @@ angular.module('dummyAppIconApp')
         var counter = 0;
         var selectedCount = 0;
 
-        for (var key in availableSizes) {
-            var sizes = availableSizes[key];
-
+        for (var key in $scope.availableSizes) {
+            var sizes = $scope.availableSizes[key];
+			
             if (sizes.selected == true) {
                 selectedCount++;
 
-                var caption = key.endsWith("icon") ? iconCaption : splashCaption;
-                var text = "";
-
-                if ($("#inputIcon").val().length > 0 || caption.length > 0) {
-                    text = "&text=" + appName + " \\n " + caption
-                }
-
-                var dataSource = "holder.js/" + sizes.height + "x" + sizes.width + "?size=" + sizes.size + "&bg=#fff&fg=#D3D3D3&outline=yes" + text;                
+                var dataSource = "holder.js/" + sizes.height + "x" + sizes.width + "?theme=simple&outline=yes&text=" + ($scope.appName.length > 0 ? $scope.appName : "App name");                
                 var image = $("<img>").attr({
                     "data-src": dataSource
                 })
 
-                Holder.run({
-                    images: image[0]
-                });
+				Holder.run({
+  					themes: {
+    					"simple": {
+		      				bg: backgroundColor,
+	    		  			fg: foregroundColor,
+    	  					font: fontName,
+		      				fontweight: fontWeight,
+		      				size: sizes.size
+    					}
+			  		},
+  					images: image[0]
+				});
 
                 convertImgToBase64URL(image[0].src, key, function(base64Img, key) {
                     convertedImages.push({
@@ -344,71 +428,42 @@ angular.module('dummyAppIconApp')
         }
 	}
 
-    $('#inputIcon').on('input', function(e) {
-        appName = $(this).val();
-        updatePreview();
-    });
-    $('#inputCaptionIcon').on('input', function(e) {
-        iconCaption = $(this).val();
-        updatePreview();
-    });
-    $('#inputCaptionSplash').on('input', function(e) {
-        splashCaption = $(this).val();
-        updatePreview();
-    });
-
     $scope.toggle = function(object, parent, child) {
-		updateSelectedItem([object.toElement.id], !$scope.availableSizes[object.toElement.id].selected);
-
-        var chosen = true;
-        $(child).each(function() {
-            if ($(this).hasClass('active')) {} else {
-                chosen = false;
-            }
-        });
-        if (chosen === true) {
-            $(parent).addClass('active');
-        } else {
-            $(parent).removeClass('active');
-        }
+    	var json = $scope.availableSizes[object.toElement.id];
+    	
+    	if (json != undefined) {
+    		updateSelectedItem([object.toElement.id], !json.selected);
+		
+			var button = angular.element(object.toElement);
+			if (button.hasClass('apple-icon')) {
+				$scope.alliOSIconSelected = isAllSelected(iOSIcons);
+			} else if (button.hasClass('apple-splash')) {
+				$scope.alliOSSplashSelected = isAllSelected(iOSSplash);
+			} else if (button.hasClass('android-icon')) {
+				$scope.allAndroidIconSelected = isAllSelected(androidIcons);
+			} else {
+				$scope.allAndroidSplashSelected = isAllSelected(androidSplash);
+			}
+    	}
     }
 
     $scope.toggleAll = function(object, child) {
-    
-    	va// r button = angular.element(object.toElement);
-//     	
-//     	console.log(button);
-//     	console.log(button.hasClass('active'));
-    	
         var keys;
         var selected = false;
         
         if (child == ".apple-icon") {
-            keys = ["ios_3x_icon", "ios_2x_icon", "ipad_1x_icon", "ipad_2x_icon", "ipadpro_2x_icon"];
+            keys = iOSIcons;
             $scope.alliOSIconSelected = selected = !$scope.alliOSIconSelected;
         } else if (child == ".apple-splash") {
-            keys = ["iphone6plusp_splash", "iphone6p_splash", "iphone5p_splash", "iphone4sp_splash", "ipad1p_splash", "ipad2p_splash", "ipadprop_splash", "iphone6plusl_splash", "iphone6l_splash", "iphone5l_splash", "iphone4sl_splash", "ipad1l_splash", "ipad2l_splash", "ipadprol_splash"];
+            keys = iOSSplash;
         	$scope.alliOSSplashSelected = selected = !$scope.alliOSSplashSelected;
         } else if (child == ".android-icon") {
-            keys = ["android_idpi_icon", "android_mdpi_icon", "android_xhdpi_icon", "android_xxhdpi_icon", "android_xxxhdpi_icon"];
+            keys = androidIcons;
             $scope.allAndroidIconSelected = selected = !$scope.allAndroidIconSelected;
         } else {
-            keys = ["android_xlargep_splash", "android_largerp_splash", "android_normalp_splash", "android_smallp_splash", "android_xlargel_splash", "android_largerl_splash", "android_normall_splash", "android_smalll_splash"];
+            keys = androidSplash;
             $scope.allAndroidSplashSelected = selected = !$scope.allAndroidSplashSelected;
         }
-
-// 		console.log($(object.toElement));
-// 		
-//         var selected = false;
-//         if ($(object.toElement).hasClass('active')) {
-//             $(object.toElement).removeClass('active');
-//             $(child).removeClass('active');
-//         } else {
-//             $(object.toElement).addClass('active');
-//             $(child).addClass('active');
-//             selected = true;
-//         }
-
 
         updateSelectedItem(keys, selected);
     }

@@ -16,15 +16,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <input class="form-control" type="text" id="inputIcon" placeholder="Apex">
-
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" id="inputCaptionIcon" placeholder="Caption Icon">
-
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" id="inputCaptionSplash" placeholder="Caption Splash">
+                <input class="form-control" type="text" ng-model="appName" ng-change="updatePreview()" id="inputIcon" placeholder="">
 
             </div>
             <div class="heading">
@@ -199,13 +191,8 @@
         <div class="col-md-4 preview">
             <h3>Preview</h3>
             
-			<img data-src="holder.js/160x160?bg=#fff&fg=#D3D3D3&outline=yes&text=App \n icon comes here" id="app_icon_preview">
-            <img data-src="holder.js/320x480?bg=#fff&fg=#D3D3D3&outline=yes&text=App \n splash comes here" id="app_splash_preview">
-<!--            <div class="app-splash">-->
-<!--                <div class="text-disp"></div>-->
-<!--                <div class="caption-splash"></div>-->
-<!---->
-<!--            </div>-->
+			<img data-src="holder.js/160x160?theme=simple&outline=yes&text=App name" id="app_icon_preview">
+            <img data-src="holder.js/320x480?theme=simple&outline=yes&text=App name" id="app_splash_preview">
         </div>
     </div>
 </section>
@@ -217,7 +204,7 @@
 
     </div>
     <div class="col-md-12">
-        <a class="btn btn-lg" id="download" ng-click="downloadButtonClicked">Download</a>
+        <a class="btn btn-lg" id="download" ng-click="downloadButtonClicked()">Download</a>
     </div>
 </section>
 
