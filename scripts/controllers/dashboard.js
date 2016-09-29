@@ -4,13 +4,13 @@ angular.module('dummyAppIconApp')
 
 .controller('DashboardCtrl', ['$scope', '$rootScope', '$state', function($scope, $rootScope, $state) {
 
-/* Declarations */
+    /* Declarations */
 
-	var fontName = "Helvetica";
-	var fontWeight = "normal";
-	var backgroundColor = "#fff";
-	var foregroundColor = "#00AEEF";
-	 
+    var fontName = "Helvetica";
+    var fontWeight = "normal";
+    var backgroundColor = "#fff";
+    var foregroundColor = "#00AEEF";
+
     var iconHeight = 160;
     var iconWidth = 160;
     var splashHeight = 480;
@@ -19,7 +19,7 @@ angular.module('dummyAppIconApp')
     var iOSSplash = ["iphone6plusp_splash", "iphone6p_splash", "iphone5p_splash", "iphone4sp_splash", "ipad1p_splash", "ipad2p_splash", "ipadprop_splash", "iphone6plusl_splash", "iphone6l_splash", "iphone5l_splash", "iphone4sl_splash", "ipad1l_splash", "ipad2l_splash", "ipadprol_splash"];
     var androidIcons = ["android_idpi_icon", "android_mdpi_icon", "android_xhdpi_icon", "android_xxhdpi_icon", "android_xxxhdpi_icon"];
     var androidSplash = ["android_xlargep_splash", "android_largerp_splash", "android_normalp_splash", "android_smallp_splash", "android_xlargel_splash", "android_largerl_splash", "android_normall_splash", "android_smalll_splash"];
-    
+
     $scope.appName = "";
     $scope.isAppleButtonClicked = false;
     $scope.isAndroidButtonClicked = false;
@@ -50,7 +50,7 @@ angular.module('dummyAppIconApp')
         ipad_2x_icon: {
             height: 152,
             width: 152,
-			size: 15,
+            size: 15,
             selected: false
         },
         ipadpro_2x_icon: {
@@ -223,33 +223,33 @@ angular.module('dummyAppIconApp')
         }
     }
 
-/* Holde JS configuration */
+    /* Holde JS configuration */
 
-	Holder.run({
-  		themes: {
-    		"simple": {
-      			bg: backgroundColor,
-      			fg: foregroundColor,
-      			font: fontName,
-      			fontweight: fontWeight,
-    		}
-  		},
-  		images: "#app_icon_preview"
-	});
-	
-	Holder.run({
-  		themes: {
-    		"simple": {
-      			bg: backgroundColor,
-      			fg: foregroundColor,
-      			font: fontName,
-      			fontweight: fontWeight,
-    		}
-  		},
-  		images: "#app_splash_preview"
-	});
-	
-/* Custom helper methods */
+    Holder.run({
+        themes: {
+            "simple": {
+                bg: backgroundColor,
+                fg: foregroundColor,
+                font: fontName,
+                fontweight: fontWeight,
+            }
+        },
+        images: "#app_icon_preview"
+    });
+
+    Holder.run({
+        themes: {
+            "simple": {
+                bg: backgroundColor,
+                fg: foregroundColor,
+                font: fontName,
+                fontweight: fontWeight,
+            }
+        },
+        images: "#app_splash_preview"
+    });
+
+    /* Custom helper methods */
 
     function convertImgToBase64URL(url, key, callback, outputFormat) {
         var img = new Image();
@@ -285,7 +285,7 @@ angular.module('dummyAppIconApp')
         });
 
     }
-    
+
     $scope.updatePreview = function() {
 
         /* Icon prview */
@@ -295,39 +295,39 @@ angular.module('dummyAppIconApp')
             "id": "app_icon_preview"
         })
 
-		Holder.run({
-  			themes: {
-    			"simple": {
-      				bg: backgroundColor,
-	      			fg: foregroundColor,
-    	  			font: fontName,
-      				fontweight: fontWeight,
-    			}
-	  		},
-  			images: image[0]
-		});
-	
+        Holder.run({
+            themes: {
+                "simple": {
+                    bg: backgroundColor,
+                    fg: foregroundColor,
+                    font: fontName,
+                    fontweight: fontWeight,
+                }
+            },
+            images: image[0]
+        });
+
         $("#app_icon_preview").replaceWith(image);
 
-		/* Splash preview */
+        /* Splash preview */
         var splashDataSource = "holder.js/" + splashWidth + "x" + splashHeight + "?theme=simple&outline=yes&text=" + $scope.appName;
         var splashImage = $("<img>").attr({
             "data-src": splashDataSource,
             "id": "app_splash_preview"
         })
 
-		Holder.run({
-  			themes: {
-    			"simple": {
-      				bg: backgroundColor,
-	      			fg: foregroundColor,
-    	  			font: fontName,
-      				fontweight: fontWeight,
-    			}
-	  		},
-  			images: splashImage[0]
-		});
-		
+        Holder.run({
+            themes: {
+                "simple": {
+                    bg: backgroundColor,
+                    fg: foregroundColor,
+                    font: fontName,
+                    fontweight: fontWeight,
+                }
+            },
+            images: splashImage[0]
+        });
+
         $("#app_splash_preview").replaceWith(splashImage);
 
     }
@@ -343,76 +343,76 @@ angular.module('dummyAppIconApp')
 
     var updateSelectedItem = function(keys, selected) {
         for (var key in $scope.availableSizes) {
-        	var found = $.inArray(key, keys) > -1;
-        	if (found) {
-	        	var json = $scope.availableSizes[key];
-    	        json.selected = selected;
-        	}
+            var found = $.inArray(key, keys) > -1;
+            if (found) {
+                var json = $scope.availableSizes[key];
+                json.selected = selected;
+            }
         }
     }
 
-	var isAllSelected = function(keys) {
-		var allSelected = true;
-		for (var key in $scope.availableSizes) {
-			var found = $.inArray(key, keys) > -1;
-			if (found && $scope.availableSizes[key].selected == false) {
-				allSelected = false;
-				break;
-			}
-		}
-		
-		return allSelected;
-	}
-	
-	
-/* Listener methods */
+    var isAllSelected = function(keys) {
+        var allSelected = true;
+        for (var key in $scope.availableSizes) {
+            var found = $.inArray(key, keys) > -1;
+            if (found && $scope.availableSizes[key].selected == false) {
+                allSelected = false;
+                break;
+            }
+        }
 
-	$scope.appleButtonClicked = function() {
-		$scope.isAppleButtonClicked = !$scope.isAppleButtonClicked;
-		
-		$scope.alliOSIconSelected = $scope.isAppleButtonClicked;
-		$scope.alliOSSplashSelected = $scope.isAppleButtonClicked;
-				
-		updateSelectedPlatforms("i", $scope.isAppleButtonClicked);
-	}
+        return allSelected;
+    }
 
-	$scope.androidButtonClicked = function() {
-		$scope.isAndroidButtonClicked = !$scope.isAndroidButtonClicked;
-		
-		$scope.allAndroidIconSelected = $scope.isAndroidButtonClicked;
-		$scope.allAndroidSplashSelected = $scope.isAndroidButtonClicked;
-		
-		updateSelectedPlatforms("a", $scope.isAndroidButtonClicked);
-	}
 
-	$scope.downloadButtonClicked = function() {
-		var convertedImages = [];
+    /* Listener methods */
+
+    $scope.appleButtonClicked = function() {
+        $scope.isAppleButtonClicked = !$scope.isAppleButtonClicked;
+
+        $scope.alliOSIconSelected = $scope.isAppleButtonClicked;
+        $scope.alliOSSplashSelected = $scope.isAppleButtonClicked;
+
+        updateSelectedPlatforms("i", $scope.isAppleButtonClicked);
+    }
+
+    $scope.androidButtonClicked = function() {
+        $scope.isAndroidButtonClicked = !$scope.isAndroidButtonClicked;
+
+        $scope.allAndroidIconSelected = $scope.isAndroidButtonClicked;
+        $scope.allAndroidSplashSelected = $scope.isAndroidButtonClicked;
+
+        updateSelectedPlatforms("a", $scope.isAndroidButtonClicked);
+    }
+
+    $scope.downloadButtonClicked = function() {
+        var convertedImages = [];
         var counter = 0;
         var selectedCount = 0;
 
         for (var key in $scope.availableSizes) {
             var sizes = $scope.availableSizes[key];
-			
+
             if (sizes.selected == true) {
                 selectedCount++;
 
-                var dataSource = "holder.js/" + sizes.height + "x" + sizes.width + "?theme=simple&outline=yes&text=" + ($scope.appName.length > 0 ? $scope.appName : "App name");                
+                var dataSource = "holder.js/" + sizes.height + "x" + sizes.width + "?theme=simple&outline=yes&text=" + ($scope.appName.length > 0 ? $scope.appName : "App name");
                 var image = $("<img>").attr({
                     "data-src": dataSource
                 })
 
-				Holder.run({
-  					themes: {
-    					"simple": {
-		      				bg: backgroundColor,
-	    		  			fg: foregroundColor,
-    	  					font: fontName,
-		      				fontweight: fontWeight,
-		      				size: sizes.size
-    					}
-			  		},
-  					images: image[0]
-				});
+                Holder.run({
+                    themes: {
+                        "simple": {
+                            bg: backgroundColor,
+                            fg: foregroundColor,
+                            font: fontName,
+                            fontweight: fontWeight,
+                            size: sizes.size
+                        }
+                    },
+                    images: image[0]
+                });
 
                 convertImgToBase64URL(image[0].src, key, function(base64Img, key) {
                     convertedImages.push({
@@ -426,37 +426,37 @@ angular.module('dummyAppIconApp')
                 });
             }
         }
-	}
+    }
 
     $scope.toggle = function(object, parent, child) {
-    	var json = $scope.availableSizes[object.toElement.id];
-    	
-    	if (json != undefined) {
-    		updateSelectedItem([object.toElement.id], !json.selected);
-		
-			var button = angular.element(object.toElement);
-			if (button.hasClass('apple-icon')) {
-				$scope.alliOSIconSelected = isAllSelected(iOSIcons);
-			} else if (button.hasClass('apple-splash')) {
-				$scope.alliOSSplashSelected = isAllSelected(iOSSplash);
-			} else if (button.hasClass('android-icon')) {
-				$scope.allAndroidIconSelected = isAllSelected(androidIcons);
-			} else {
-				$scope.allAndroidSplashSelected = isAllSelected(androidSplash);
-			}
-    	}
+        var json = $scope.availableSizes[object.toElement.id];
+
+        if (json != undefined) {
+            updateSelectedItem([object.toElement.id], !json.selected);
+
+            var button = angular.element(object.toElement);
+            if (button.hasClass('apple-icon')) {
+                $scope.alliOSIconSelected = isAllSelected(iOSIcons);
+            } else if (button.hasClass('apple-splash')) {
+                $scope.alliOSSplashSelected = isAllSelected(iOSSplash);
+            } else if (button.hasClass('android-icon')) {
+                $scope.allAndroidIconSelected = isAllSelected(androidIcons);
+            } else {
+                $scope.allAndroidSplashSelected = isAllSelected(androidSplash);
+            }
+        }
     }
 
     $scope.toggleAll = function(object, child) {
         var keys;
         var selected = false;
-        
+
         if (child == ".apple-icon") {
             keys = iOSIcons;
             $scope.alliOSIconSelected = selected = !$scope.alliOSIconSelected;
         } else if (child == ".apple-splash") {
             keys = iOSSplash;
-        	$scope.alliOSSplashSelected = selected = !$scope.alliOSSplashSelected;
+            $scope.alliOSSplashSelected = selected = !$scope.alliOSSplashSelected;
         } else if (child == ".android-icon") {
             keys = androidIcons;
             $scope.allAndroidIconSelected = selected = !$scope.allAndroidIconSelected;
