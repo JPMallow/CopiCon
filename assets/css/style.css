@@ -153,7 +153,9 @@
     height: 450px;
     width: 275px;
 }
-
+img#app_icon_preview {
+    margin-bottom: 10px;
+}
 .copicon .preview .app-icon,
 .copicon .preview .app-splash {
     margin-bottom: 15px;
