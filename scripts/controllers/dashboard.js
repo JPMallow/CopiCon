@@ -15,8 +15,8 @@ angular.module('dummyAppIconApp')
     var iconWidth = 160;
     var splashHeight = 480;
     var splashWidth = 320;
-    var iOSIcons = ["ios_3x_icon", "ios_2x_icon", "ipad_1x_icon", "ipad_2x_icon", "ipadpro_2x_icon"];
-    var iOSSplash = ["iphone6plusp_splash", "iphone6p_splash", "iphone5p_splash", "iphone4sp_splash", "ipad1p_splash", "ipad2p_splash", "ipadprop_splash", "iphone6plusl_splash", "iphone6l_splash", "iphone5l_splash", "iphone4sl_splash", "ipad1l_splash", "ipad2l_splash", "ipadprol_splash"];
+    var iOSIcons = ["ios_3x_icon", "ios_2x_icon", "ipad_1x_icon", "ipad_2x_icon", "ipadpro_2x_icon", "ios_store_icon"];
+    var iOSSplash = ["iphonexp_splash", "iphone6plusp_splash", "iphone6p_splash", "iphone5p_splash", "iphone4sp_splash", "ipad1p_splash", "ipad2p_splash", "ipadprop_splash", "iphonexl_splash", "iphone6plusl_splash", "iphone6l_splash", "iphone5l_splash", "iphone4sl_splash", "ipad1l_splash", "ipad2l_splash", "ipadprol_splash"];
     var androidIcons = ["android_idpi_icon", "android_mdpi_icon", "android_xhdpi_icon", "android_xxhdpi_icon", "android_xxxhdpi_icon"];
     var androidSplash = ["android_xlargep_splash", "android_largerp_splash", "android_normalp_splash", "android_smallp_splash", "android_xlargel_splash", "android_largerl_splash", "android_normall_splash", "android_smalll_splash"];
 
@@ -59,6 +59,18 @@ angular.module('dummyAppIconApp')
             size: 16,
             selected: false
         },
+        ios_store_icon: {
+            height: 1024,
+            width: 1024,
+            size: 60,
+            selected: false
+        },
+        iphonexp_splash: {
+            height: 1125,
+            width: 2436,
+            size: 60,
+            selected: false
+        },
         iphone6plusp_splash: {
             height: 1242,
             width: 2208,
@@ -99,6 +111,12 @@ angular.module('dummyAppIconApp')
             height: 2048,
             width: 2732,
             size: 99,
+            selected: false
+        },
+        iphonexl_splash: {
+            height: 2436,
+            width: 1125,
+            size: 60,
             selected: false
         },
         iphone6plusl_splash: {
@@ -430,6 +448,8 @@ angular.module('dummyAppIconApp')
 
     $scope.toggle = function(object, parent, child) {
         var json = $scope.availableSizes[object.toElement.id];
+
+        console.log(json);
 
         if (json != undefined) {
             updateSelectedItem([object.toElement.id], !json.selected);
